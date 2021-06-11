@@ -27,14 +27,13 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
     {
-        float xInput = 0f;
-        xInput = Input.GetAxis(xAxis);
-        float zInput = 0f;
-        zInput = Input.GetAxis(zAxis);
-        bool jumpButtonPressed = false;
-        jumpButtonPressed = Input.GetButtonDown(jumpButton);
+        float xInput = Input.GetAxis(xAxis);
+        float zInput = Input.GetAxis(zAxis);
+        bool jumpButtonPressed = Input.GetButtonDown(jumpButton);
 
-		if (jumpButtonPressed)
+        ySpeed = ySpeed + gravity * Time.deltaTime;
+
+        if (jumpButtonPressed)
 		{
 			if (myController.isGrounded)
 			{
@@ -43,12 +42,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        ySpeed = ySpeed + gravity * Time.deltaTime;
-
         Vector3 moveVector = Vector3.zero;
+
 
         moveVector.x = xInput * moveSpeed * Time.deltaTime;
         moveVector.z = zInput * moveSpeed * Time.deltaTime;
+
+        //Vector3 relativeHorizontalMovement = xInput * moveSpeed * Time.deltaTime * transform.right;
+        //Vector3 relativeForwardMovement = zInput * moveSpeed * Time.deltaTime * transform.forward;
+        //moveVector = moveVector + relativeForwardMovement;
+        //moveVector = moveVector + relativeHorizontalMovement;
+
         moveVector.y = ySpeed * Time.deltaTime;
 
         myController.Move(moveVector);
