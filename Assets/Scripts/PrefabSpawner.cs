@@ -7,15 +7,6 @@ public class PrefabSpawner : MonoBehaviour
 	[SerializeField] GameObject prefab;
 	[SerializeField] Transform spawnPoint;
 
-	private void Update()
-	{
-		string fireButton = "Fire1";
-		if (Input.GetButtonDown(fireButton))
-		{
-			SpawnObject();
-		}
-	}
-
 	public void SpawnObject()
 	{
 		GameObject spawnedObject = Instantiate(prefab);

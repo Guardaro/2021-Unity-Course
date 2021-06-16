@@ -324,6 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420676206}
   - component: {fileID: 420676207}
+  - component: {fileID: 420676208}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -361,6 +362,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8465231109618731172, guid: 09fa1b08161998642b032ab0dfdf1a70, type: 3}
   spawnPoint: {fileID: 1096022828}
+--- !u!114 &420676208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420676205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d003e6780b5de2541b140bc3a18673ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInterval: 1
 --- !u!1 &446294733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1142,7 @@ GameObject:
   - component: {fileID: 1356605155}
   - component: {fileID: 1356605156}
   - component: {fileID: 1356605157}
+  - component: {fileID: 1356605158}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1280,6 +1295,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1356605158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356605153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1015061d527ff24f8fa3946e53d14c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 10
 --- !u!1 &1476175966
 GameObject:
   m_ObjectHideFlags: 0
