@@ -6,14 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
 	[SerializeField] int hitPoints = 10;
 
-	private void Update()
-	{
-		if (Input.GetButton("Fire1"))
-		{
-			TakeDamage(1);
-		}
-	}
-
 	public void TakeDamage(int damage)
 	{
 		hitPoints -= damage;
@@ -26,5 +18,10 @@ public class PlayerHealth : MonoBehaviour
 	private void Die()
 	{
 		Destroy(gameObject);
+	}
+
+	public int GetHealth()
+	{
+		return hitPoints;
 	}
 }
